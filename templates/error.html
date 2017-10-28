@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ShareUrl-Sharing is caring</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css/scrolling-nav.css" rel="stylesheet">
+    <link href="../static/css/masthead.scss" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+        <link rel="import" href="popup.html">
+
+    <script>
+        var go = function () {
+            var isInstalled = document.documentElement.getAttribute('extension-installed');
+            if (isInstalled=="true") {
+                var event = document.createEvent('Event');
+                event.initEvent('invokeVkEvent');
+                document.dispatchEvent(event);
+            }
+            else {
+                $("#myModal").modal();
+            }
+        }
+    </script>
+    <!-- Modal content--> 
+    <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Share Url</h4>
+                </div>
+                <div class="modal-body">
+                        <button type="button" onclick="window.open('https://www.google.com','_blank');" class="btn btn-primary">Install chrome-Extension</button>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="http://localhost:5000">ShareUrl</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="masthead">
+        <div class="container text-center">
+            <h1>Welcome to ShareUrl</h1>
+            <p class="lead">We care to share.</p>
+            <button type="button" onclick="go()" class="btn btn-primary">Click to access url</button>
+        </div>
+    </header>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/popper/popper.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="../static/js/scrolling-nav.js"></script>
+
+</body>
+
+</html>
