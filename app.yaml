@@ -11,7 +11,7 @@ handlers:
   script: main.app
 
 env_variables:
-    CLOUDSQL_CONNECTION_NAME: shareurl-2222:asia-east1:sharedsql
+    CLOUDSQL_CONNECTION_NAME: shareurl-007:asia-east1:sharedsql
     CLOUDSQL_USER: root
     CLOUDSQL_PASSWORD: root12
     CLOUDSQL_DATABASE: Bucket
